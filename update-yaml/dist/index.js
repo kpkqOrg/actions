@@ -45,9 +45,9 @@ function run() {
             const propertyToChange = core.getInput('property-to-change');
             const value = core.getInput('value-to-change');
             const content = fs.readFileSync(filename, 'utf8');
-            core.debug(content);
+            console.log(content);
             nestedProperty.set(content, propertyToChange, value);
-            core.debug(content);
+            console.log(content);
             fs.writeFileSync(filename, content);
         }
         catch (error) {

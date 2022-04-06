@@ -11,11 +11,11 @@ async function run(): Promise<void> {
     const value: string = core.getInput('value-to-change')
     
     const content = fs.readFileSync(filename, 'utf8')
-    core.debug(content)
+    console.log(content)
 
     nestedProperty.set(content, propertyToChange, value);
 
-    core.debug(content)
+    console.log(content)
 
     fs.writeFileSync(filename, content)
     
