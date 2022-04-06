@@ -11,9 +11,9 @@ async function run(): Promise<void> {
     const value: string = core.getInput('value-to-change')
     
     const content = fs.readFileSync(filename, 'utf8')
-    console.log(content)
+    //console.log(content)
 
-    nestedProperty.get(content, propertyToChange);
+    console.log(nestedProperty.get(content, propertyToChange));
 
     //console.log(content)
 
