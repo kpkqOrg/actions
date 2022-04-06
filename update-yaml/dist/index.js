@@ -48,7 +48,7 @@ function run() {
             const content = yaml.parse(fs.readFileSync(filename, 'utf8').toString());
             console.log(nestedProperty.set(content, propertyToChange, value));
             console.log(content);
-            fs.writeFileSync(filename, content);
+            fs.writeFileSync(filename, yaml.stringify(content));
         }
         catch (error) {
             if (error instanceof Error)

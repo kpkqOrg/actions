@@ -16,7 +16,7 @@ async function run(): Promise<void> {
 
     console.log(content)
 
-    fs.writeFileSync(filename, content)
+    fs.writeFileSync(filename, yaml.stringify(content))
     
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
