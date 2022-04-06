@@ -13,9 +13,9 @@ async function run(): Promise<void> {
     const content = fs.readFileSync(filename, 'utf8')
     console.log(content)
 
-    nestedProperty.set(content, propertyToChange, value);
+    nestedProperty.get(content, propertyToChange);
 
-    console.log(content)
+    //console.log(content)
 
     fs.writeFileSync(filename, content)
     
