@@ -11,7 +11,7 @@ async function run(): Promise<void> {
     const value: string = core.getInput('value-to-change')
     
     const content = yaml.parse(fs.readFileSync(filename, 'utf8'))
-    //console.log(content)
+    console.log(content)
 
     console.log(nestedProperty.get(content, propertyToChange));
 
