@@ -45,7 +45,7 @@ function run() {
             const filename = core.getInput('filename');
             const propertyToChange = core.getInput('property-to-change');
             const value = core.getInput('value-to-change');
-            const content = yaml.parse(fs.readFileSync(filename, 'utf8'));
+            const content = yaml.parse(fs.readFileSync(filename, 'utf8').toString());
             console.log(content);
             console.log(nestedProperty.get(content, propertyToChange));
             //console.log(content)
